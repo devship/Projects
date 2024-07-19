@@ -1,6 +1,7 @@
 body{
     /* background-color: #003300; */
     background-image: url(image/pexels-pixabay-326333.jpg);
+    background-repeat: no-repeat;
     
 }
 .container{
