@@ -1,5 +1,6 @@
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
+const innerGameContainer = document.querySelector('.invisible');
 const pokemonName = document.getElementById('pokemon-name');
 const pokemonId = document.getElementById('pokemon-id');
 const spriteContainer = document.getElementById('sprite-container')
@@ -51,7 +52,9 @@ console.log(capitalize)
 
 searchButton.addEventListener("click", (e) => {
     e.preventDefault();
-    fetchData()
+    fetchData();
+    innerGameContainer.style.height = "auto"
+    
 });
 
 searchInput.addEventListener("keydown", e => {
