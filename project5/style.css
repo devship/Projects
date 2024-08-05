@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --dark-grey: #00001A;
+    --light-grey: #F1F1E6;
+    --purple: #6600ff;
+    --white: #ffffff;
+    --shadow: #d9d9d9 ;
+    
+}
+body{
+    background-color: var(--dark-grey);
+}
+main{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+h1{
+    color: var(--white);
+    font-size: 50px;
+    margin: 10px;
+}
+h4{
+ font-size: 20px;
+ text-align: center;
+ margin-top: 20px;
+}
+.game-container {
+    background-color: var(--light-grey);
+    width: 32%;
+    height: auto;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px var(--shadow);
+}
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+   margin-top: 10px;
+}
+input{
+    padding: 10px;
+    margin: 20px;
+}
+button{
+    background-color: var(--purple);
+    color: var(--white);
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.invisible {
+    padding: 10px;
+    width: initial;
+    height: 300px;
+}
+#sprite-container{
+    /* background-color: red; */
+    width: 100px;
+    height: auto;
+}
+.inner-game-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+}
+.inner-game-container > div {
+    background-color: var(--purple);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    height: 50px;
+}
+.color{
+    background-color: var(--purple);
+    color: var(--white);
+}

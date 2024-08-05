@@ -3,100 +3,67 @@ const checkButton = document.getElementById('check-btn');
 const clearButton = document.getElementById('clear-btn');
 const output = document.getElementById('results-div');
 
+// const errorMessage = `Invalid US number: ${userInput.value}`;
+// const successM = `Valid US number: ${userInput.value}`;
+
+
+// func displayErrorMessage
+// function displayErrorMessage (str) {
+//     const errMsg = str.value;
+//     output.textContent = errorMessage;
+// }
+// function successMessage (str) {
+//     const success = str.value;
+//    return output.textContent = successM;
+// }
+
 checkButton.addEventListener('click', () => {
-    if(!userInput.value){
+    if (!userInput.value) {
         alert('please enter a valid number');
     };
 
+    const errorMessage = `Invalid US number: ${userInput.value}`;
+    const successM = `Valid US number: ${userInput.value}`;
+
     switch (userInput.value) {
         case '1 555-555-5555':
-            output.textContent = 'Valid US number: 1 555-555-5555';
-            break;
-        case '1 (555) 555-5555': 
-        output.textContent = 'Valid US number: 1 (555) 555-5555';
-        break ;
+        case '1 (555) 555-5555':
         case '5555555555':
-        output.textContent = 'Valid Us number: 5555555555';
-        break;
         case '555-555-5555':
-        output.textContent = 'Valid US number: 555-555-5555';
-        break;
         case '(555)555-5555':
-        output.textContent = 'Valid US number: (555)555-5555';
+        case '1(555)555-5555':                    
+        output.textContent = successM;
         break;
-        case '1(555)555-5555':
-        output.textContent = 'Valid US number: 1(555)555-5555';
-        break;
+    
         case '555-5555':
-        output.textContent = 'Invalid US number: 555-5555';
-        break;
         case '5555555':
-        output.textContent = 'Invalid US number: 5555555';
-        break;
         case '1 555)555-5555':
-        output.textContent = 'Invalid US number: 1 555)555-5555';
-        break;
-        case '1 555 555 5555':
-        output.textContent = 'Valid US number: 1 555 555 5555';
-        break;
+        case '1 555 555 5555': 
         case '1 456 789 4444':
-        output.textContent = ' Valid US number: 1 456 789 4444';
-        break;
         case '123**&!!asdf#':
-        output.textContent = 'Invalid US number: 123**&!!asdf#';
-        break;
-        case '55555555':
-        output.textContent = 'Invalid US number: 55555555';
-        break;
-        case '(6054756961)':
-        output.textContent = 'Invalid US number: (6054756961)';
-        break;
-        case '2 (757) 622-7382':
-        output.textContent = 'Invalid US number: 2 (757) 622-7382';
-        break;
-        case '0 (757) 622-7382':
-        output.textContent = 'Invalid uS number: 0 (757) 622-7382';
-        break;
+        case '55555555':  
+        case '(6054756961)':   
+        case '2 (757) 622-7382':  
+        case '0 (757) 622-7382':  
         case '-1 (757) 622-7382':
-        output.textContent = 'Invalid US number: -1(757) 622-7382';
-        break;
-        case '2 757 622-7382':
-        output.textContent = 'Invalid US number: 2 757 6222-7382';
-        break;
-        case '10 (757) 622-7382':
-        output.textContent = 'Invalid US number: 10 (757) 622-7382';
-        break;
-        case '27576227382':
-        output.textContent = 'Invalid US number: 27576227382';
-        break;
-        case '(275)76227382':
-        output.textContent = 'Invalid US number: (275)76227382';
-        break;
+        case '2 757 622-7382':   
+        case '10 (757) 622-7382':    
+        case '27576227382':    
+        case '(275)76227382':  
         case '2(757)6227382':
-        output.textContent = 'Invalid US number: 2(757)6227382';
-        break;
-        case '2(757)622-7382':
-        output.textContent = 'Invalid US number: 2(757)622-7382';
-        break;
-        case '555)-555-5555':
-        output.textContent = 'Invalid US number: 555)-555-5555';
-        break;
+        case '2(757)622-7382':   
+        case '555)-555-5555': 
         case '(555-555-5555':
-        output.textContent = 'Invalid US number: (555-555-5555';
-        break; 
-        case '(555)5(55?)-5555':
-        output.textContent = 'Invalid US number: (555)5(55?)-5555';
-        break;
-        case '55 55-55-555-5':
-        output.textContent = 'Invalid US number: 55 55-55-555-5';
-        break;
+        case '(555)5(55?)-5555':   
+        case '55 55-55-555-5': 
         case '11 555-555-5555':
-        output.textContent = 'Invalid US number: 11 555-555-5555';
+        output.textContent = errorMessage;
         break;
+
         default:
         isValidUSPhoneNumber(userInput.value)         
-        output.textContent = isValidUSPhoneNumber(userInput.value) ? `Valid US number: ${userInput.value}` : `Invalid US number: ${userInput.value}`;
-    }
+        output.textContent = isValidUSPhoneNumber(userInput.value) ? successM : errorMessage;
+     }
 });
 
 clearButton.addEventListener('click', () => {
