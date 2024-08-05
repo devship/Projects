@@ -69,11 +69,7 @@ button{
     width: initial;
     height: 300px;
 }
-#sprite-container{
-    /* background-color: red; */
-    width: 100px;
-    height: auto;
-}
+
 .inner-game-container {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -89,6 +85,13 @@ button{
     height: 50px;
 }
 .color{
-    background-color: var(--purple);
+    background-color: green;
     color: var(--white);
+    padding: 5px;
+    border-radius: 2px;
+}
+#sprite{
+width: 55%;
+height: auto;
+
 }

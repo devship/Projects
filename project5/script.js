@@ -34,7 +34,6 @@ const showData = (data) => {
  pokemonId.textContent = `#${id}`;
  pokemonWeight.textContent = `weight: ${weight}`;
  pokemonHeight.textContent = `height: ${height}`
- pokemonId.textContent = ``
 
 spriteContainer.innerHTML = `<img id="sprite" src= "${sprites.front_default}" alt="${name}">`;
 pokemonHp.textContent = `${stats[0].base_stat}`;
@@ -44,7 +43,7 @@ specialAttack.textContent = `${stats[3].base_stat}`;
 specialDefense.textContent = `${stats[4].base_stat}`;
 speed.textContent = `${stats[5].base_stat}`;
 
-pokemonTypes.innerHTML = types.map(obj => `<span class"color">${obj.type.name[0].toUpperCase() + obj.type.name.slice(1)}</span>`).join(" ")
+pokemonTypes.innerHTML = types.map(obj => `<span class ="color">${obj.type.name[0].toUpperCase() + obj.type.name.slice(1)}</span>`).join(" ")
 }
 const nameTest = "abigail";
 const capitalize = nameTest[0].toUpperCase() + nameTest.slice(1);
